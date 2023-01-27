@@ -2,7 +2,7 @@
   "images" : [
     {
       "filename" : "logo.jpeg",
-      "idiom" : "iphone"
+      "idiom" : "universal"
     }
   ],
   "info" : {

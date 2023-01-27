@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,76 +12,82 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BFTurma349" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 2.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRa-cj-VQi">
-                                <rect key="frame" x="60" y="370" width="114" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-Vl-C1Y">
+                                <rect key="frame" x="120" y="402" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.31764706970000001" green="0.46274507050000002" blue="0.93333339689999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="U1A-qd-5kr"/>
+                                    <constraint firstAttribute="height" constant="40" id="VSd-YH-j15"/>
                                 </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="calculateDifferencePrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4UG-T2-6lT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lPs-FK-lla">
+                                <rect key="frame" x="40" y="482" width="310" height="60"/>
+                                <color key="backgroundColor" red="0.27290159460000002" green="0.46731650829999999" blue="0.96564692259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ULW-Nd-SUi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2pL-wd-Fy0">
+                                <rect key="frame" x="75" y="47" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex.: 2.99" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpW-PM-s1B">
+                                <rect key="frame" x="75" y="203" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço Gasolina" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzB-Wc-aXS">
-                                <rect key="frame" x="60" y="339" width="114" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="Rcj-ph-bfe"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex.: 1.99" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-N3-OTi">
+                                <rect key="frame" x="218" y="203" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preço da gasolina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDS-9b-8lb">
+                                <rect key="frame" x="56" y="173" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CpS-Qd-Mbr">
-                                <rect key="frame" x="15" y="109" width="400" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="zVo-Wn-zQ0"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 1.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlj-Mn-cyn">
-                                <rect key="frame" x="256" y="370" width="114" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="dJH-8S-xbD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço Álcool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAc-n6-MSH">
-                                <rect key="frame" x="256" y="339" width="114" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="x6e-IK-aGc"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preço do álcool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d59-ao-fMS">
+                                <rect key="frame" x="207" y="172" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.02850000188" green="0.028500003740000002" blue="0.02850000188" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.75686275960000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="CpS-Qd-Mbr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="3q0-Oa-6FN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wlj-Mn-cyn" secondAttribute="trailing" constant="60" id="498-b6-zfA"/>
-                            <constraint firstItem="wlj-Mn-cyn" firstAttribute="top" secondItem="GAc-n6-MSH" secondAttribute="bottom" constant="10" id="5n9-7n-5VC"/>
-                            <constraint firstItem="VzB-Wc-aXS" firstAttribute="centerX" secondItem="SRa-cj-VQi" secondAttribute="centerX" id="VMZ-hN-Gri"/>
-                            <constraint firstItem="GAc-n6-MSH" firstAttribute="centerX" secondItem="wlj-Mn-cyn" secondAttribute="centerX" id="Yof-G2-Q8c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CpS-Qd-Mbr" secondAttribute="trailing" constant="15" id="aav-Xp-AZ2"/>
-                            <constraint firstItem="SRa-cj-VQi" firstAttribute="top" secondItem="VzB-Wc-aXS" secondAttribute="bottom" constant="10" id="dWT-it-oHb"/>
-                            <constraint firstItem="VzB-Wc-aXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="eNH-ru-ix4"/>
-                            <constraint firstItem="CpS-Qd-Mbr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="fAM-En-dL2"/>
-                            <constraint firstItem="VzB-Wc-aXS" firstAttribute="top" secondItem="CpS-Qd-Mbr" secondAttribute="bottom" constant="30" id="fQA-bz-r65"/>
-                            <constraint firstItem="GAc-n6-MSH" firstAttribute="top" secondItem="CpS-Qd-Mbr" secondAttribute="bottom" constant="30" id="jQd-YF-dY8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GAc-n6-MSH" secondAttribute="trailing" constant="60" id="vFx-q5-u68"/>
-                            <constraint firstItem="SRa-cj-VQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="wO7-ax-RVY"/>
+                            <constraint firstItem="lPs-FK-lla" firstAttribute="top" secondItem="0Ny-Vl-C1Y" secondAttribute="bottom" constant="40" id="Cxb-d5-JYl"/>
+                            <constraint firstItem="0Ny-Vl-C1Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="L64-Ki-6qv"/>
+                            <constraint firstItem="lPs-FK-lla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YfS-Ic-N7x"/>
+                            <constraint firstItem="0Ny-Vl-C1Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ytd-Bv-3vv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lPs-FK-lla" secondAttribute="trailing" constant="40" id="nLY-oX-a0t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ny-Vl-C1Y" secondAttribute="trailing" constant="120" id="sqj-vn-9SS"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alcoolTextField" destination="wlj-Mn-cyn" id="J77-am-ueV"/>
-                        <outlet property="gasolinaTextField" destination="SRa-cj-VQi" id="Aiw-K8-O1x"/>
+                        <outlet property="alcoolTextField" destination="HZN-N3-OTi" id="0eT-v8-6Jy"/>
+                        <outlet property="gasolinaTextField" destination="CpW-PM-s1B" id="ulJ-M9-1HU"/>
+                        <outlet property="tappedButton" destination="0Ny-Vl-C1Y" id="nRX-zk-0um"/>
+                        <outlet property="textField" destination="lPs-FK-lla" id="Lep-5v-zE0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9.2307692307692299" y="-34.834123222748815"/>
+            <point key="canvasLocation" x="140" y="4"/>
         </scene>
     </scenes>
     <resources>
