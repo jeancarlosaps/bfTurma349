@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BFTurma349" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 2.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRa-cj-VQi">
@@ -33,13 +33,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CpS-Qd-Mbr">
-                                <rect key="frame" x="15" y="109" width="400" height="200"/>
+                                <rect key="frame" x="15" y="109" width="363" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="zVo-Wn-zQ0"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 1.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlj-Mn-cyn">
-                                <rect key="frame" x="256" y="370" width="114" height="34"/>
+                                <rect key="frame" x="219" y="370" width="114" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="dJH-8S-xbD"/>
                                 </constraints>
@@ -47,11 +47,25 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço Álcool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAc-n6-MSH">
-                                <rect key="frame" x="256" y="339" width="114" height="21"/>
+                                <rect key="frame" x="219" y="339" width="114" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="x6e-IK-aGc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odU-Ib-jqL">
+                                <rect key="frame" x="153.66666666666666" y="444" width="86" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calcular"/>
+                                <connections>
+                                    <action selector="calculateBestFuel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34S-Cv-O3F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpE-TR-7Ho">
+                                <rect key="frame" x="60" y="519" width="273" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -62,14 +76,20 @@
                             <constraint firstItem="CpS-Qd-Mbr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="3q0-Oa-6FN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wlj-Mn-cyn" secondAttribute="trailing" constant="60" id="498-b6-zfA"/>
                             <constraint firstItem="wlj-Mn-cyn" firstAttribute="top" secondItem="GAc-n6-MSH" secondAttribute="bottom" constant="10" id="5n9-7n-5VC"/>
+                            <constraint firstItem="fpE-TR-7Ho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7b6-Ei-oW9"/>
+                            <constraint firstItem="odU-Ib-jqL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ps-Kz-1My"/>
+                            <constraint firstAttribute="trailing" secondItem="fpE-TR-7Ho" secondAttribute="trailing" constant="60" id="Dyk-iY-Rn8"/>
                             <constraint firstItem="VzB-Wc-aXS" firstAttribute="centerX" secondItem="SRa-cj-VQi" secondAttribute="centerX" id="VMZ-hN-Gri"/>
                             <constraint firstItem="GAc-n6-MSH" firstAttribute="centerX" secondItem="wlj-Mn-cyn" secondAttribute="centerX" id="Yof-G2-Q8c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CpS-Qd-Mbr" secondAttribute="trailing" constant="15" id="aav-Xp-AZ2"/>
                             <constraint firstItem="SRa-cj-VQi" firstAttribute="top" secondItem="VzB-Wc-aXS" secondAttribute="bottom" constant="10" id="dWT-it-oHb"/>
                             <constraint firstItem="VzB-Wc-aXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="eNH-ru-ix4"/>
+                            <constraint firstItem="fpE-TR-7Ho" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="efG-cy-Ini"/>
                             <constraint firstItem="CpS-Qd-Mbr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="fAM-En-dL2"/>
                             <constraint firstItem="VzB-Wc-aXS" firstAttribute="top" secondItem="CpS-Qd-Mbr" secondAttribute="bottom" constant="30" id="fQA-bz-r65"/>
+                            <constraint firstItem="fpE-TR-7Ho" firstAttribute="top" secondItem="odU-Ib-jqL" secondAttribute="bottom" constant="40" id="igE-Lq-dAW"/>
                             <constraint firstItem="GAc-n6-MSH" firstAttribute="top" secondItem="CpS-Qd-Mbr" secondAttribute="bottom" constant="30" id="jQd-YF-dY8"/>
+                            <constraint firstItem="odU-Ib-jqL" firstAttribute="top" secondItem="SRa-cj-VQi" secondAttribute="bottom" constant="40" id="tOg-c8-oJU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GAc-n6-MSH" secondAttribute="trailing" constant="60" id="vFx-q5-u68"/>
                             <constraint firstItem="SRa-cj-VQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="wO7-ax-RVY"/>
                         </constraints>
@@ -77,6 +97,7 @@
                     <connections>
                         <outlet property="alcoolTextField" destination="wlj-Mn-cyn" id="J77-am-ueV"/>
                         <outlet property="gasolinaTextField" destination="SRa-cj-VQi" id="Aiw-K8-O1x"/>
+                        <outlet property="result" destination="fpE-TR-7Ho" id="TMJ-wv-OmH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
