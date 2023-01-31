@@ -8,8 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
+    @IBOutlet weak var tappedButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+
     @IBOutlet weak var gasolinaTextField: UITextField!
     @IBOutlet weak var alcoolTextField: UITextField!
     @IBOutlet weak var result: UILabel!
@@ -31,7 +33,6 @@ class ViewController: UIViewController {
         gasolinaTextField.delegate = self
         alcoolTextField.delegate = self
     }
-    
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -43,6 +44,4 @@ extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         textField.layer.borderWidth = 0
     }
-
-    
 }
